@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="village.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Courgette&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="bg-light">
+        <!-- A grey horizontal navbar that becomes vertical on small screens -->
+        <nav class="navbar navbar-expand-sm bg-dark">
+
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="villagewebside.html" target="blank">Home </a>
+                </li>
+              
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <h1 class=" p text-center text-capitalize pt-4 ">
+                Morden shamshanghat
+            </h1>
+            <hr class="w-50 mx-auto ">
+            <div class="row mb-5">
+                <div class="col-lg-4 col-md col-12">
+                    <img src="image/v25.jpeg" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md col-12">
+                    <h1 class=" p text-center  text-capitalize text-primary "> information</h1>
+                    <hr>
+                    <h5 id="convert">
+                        However this is where people never like to come
+                        Today, we will talk about one such modern crematorium which is situated on the Ganges Ghat in
+                        Bhogaon village.
+                        Here people come from very far away to cremate the dead body.
+                        My grandfather often says
+                        Human has true knowledge at the cremation ground
+                        Probably this would have been the meaning of what he said. A person is surrounded by many types
+                        of attachment in his life, such as the greed of wealth, the greed of the son etc.
+
+                        While death is a true truth, after death, everyone has to come one day or the other.
+                        There is no problem of opening or closing of this crematorium, you can come here anytime to burn
+                        the body.
+                        It is 5 km south of Aurai.
+
+                    </h5>
+                    <a href="https://goo.gl/maps/QB7FVHeDRuXuf6m59 " target="black" class="btn btn-warning">
+                        location</a>
+                        
+
+                    <button class="btn btn-primary text-capitalize ml-3" onclick="myfun1()"> see in hindi</button>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    <script>
+        function myfun1() {
+            var req = new XMLHttpRequest();
+            req.open('GET', 'ghathindi.html', true);
+            req.send();
+            req.onreadystatechange = function () {
+                if (req.readyState == 4 && req.status == 200) {
+                    document.getElementById('convert').innerHTML = req.responseText;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

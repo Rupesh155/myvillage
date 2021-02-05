@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wi-Ser</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="loading.css">
+  <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+</head>
+
+<body>
+  <div class="main">
+    <div class="sub">
+      <img class="m1" src="illustrator.png" alt="">
+    </div>
+    <div class="sub1">
+      <img class="m2" src="Logo.png" alt="">
+    </div>
+    <div class="sub2">
+      <img class="m3" src="Icon awesome-download.png" alt="">
+    </div>
+    <form id="dropFileForm">
+      <input class="file" type="file" id="fileInput" onchange="addFiles(event)">
+
+      <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();"
+        ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+                  addFiles(event);">
+
+        <br>
+        <span id="fileLabelText">
+          Drag files to Upload or
+        </span>
+        <br>
+        <span id="uploadStatus"></span>
+        <h2 id="brow" style="font-size: 25px;"> Browse</h2>
+      </label>
+      <img class="m4" src="Icon feather-upload-cloud.png" alt="">
+
+    </form>
+    <div class="sub4">
+      <p> Description</p>
+      <textarea class="description" name="" id="" cols="34" rows="6"></textarea>
+
+    </div>
+
+    <input id="uploadBtn" type="submit" value="Upload" class="uploadButton">
+
+    <div class="uploadingDialog">
+      <!-- loading with animation -->
+      <!-- loading.css -->
+      <div class="middle">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+      </div>
+      <img id="doneSign" src="Icon feather-upload-cloud.png" alt="">
+      <h1 class="uploadingText"> Uploading...</h1>
+    </div>
+
+    <div class="uploadSuccessDialog">
+      <img id="successCrossSign" src="Icon ionic-ios-close-circle.png" alt="">
+      <img id="doneSign" src="Icon ionic-md-cloud-done.png" alt="">
+      <h1 class="uploadSuccessText"> File Uploaded</h1>
+    </div>
+
+    <div class="uploadFailedDialog">
+      <img id="failedCrossSign" src="Icon ionic-ios-close-circle.png" alt="">
+      <img id="doneSign" src="Icon ionic-ios-close-circle.png" alt="">
+      <h1 class="uploadFailedText"> Upload Failed</h1>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+<script>
+  var dropFileForm = document.getElementById("dropFileForm");
+  var fileLabelText = document.getElementById("fileLabelText");
+  var uploadStatus = document.getElementById("uploadStatus");
+  var fileInput = document.getElementById("fileInput");
+  var droppedFiles;
+
+  function overrideDefault(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  function fileHover() {
+    dropFileForm.classList.add("fileHover");
+  }
+
+  function fileHoverEnd() {
+    dropFileForm.classList.remove("fileHover");
+  }
+
+  function addFiles(event) {
+    droppedFiles = event.target.files || event.dataTransfer.files;
+    showFiles(droppedFiles);
+  }
+
+  function showFiles(files) {
+    if (files.length > 1) {
+      fileLabelText.innerText = files.length + " files selected";
+    } else {
+      fileLabelText.innerText = files[0].name;
+    }
+  }
+
+  // function uploadFiles(event) {
+  //   event.preventDefault();
+  //   changeStatus("Uploading...");
+
+  //   var formData = new FormData();
+
+  //   for (var i = 0, file; (file = droppedFiles[i]); i++) {
+  //     formData.append(fileInput.name, file, file.name);
+  //   }
+
+  //   var xhr = new XMLHttpRequest();
+  //   xhr.onreadystatechange = function (data) {
+  //     //handle server response and change status of
+  //     //upload process via changeStatus(text)
+  //     console.log(xhr.response);
+  //   };
+  //   xhr.open(dropFileForm.method, dropFileForm.action, true);
+  //   xhr.send(formData);
+  // }
+
+  function changeStatus(text) {
+    uploadStatus.innerText = text;
+  }
+</script>
+
+</html>

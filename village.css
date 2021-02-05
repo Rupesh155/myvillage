@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+} .carousel-inner img {
+    width: 100%;
+    height: 100%;
+}.p{
+    font-family: 'Cardo', serif;
+font-family: 'Courgette', cursive;
+}.gallerys{
+    font-family: 'Cardo', serif;
+font-family: 'Courgette', cursive;
+}h5{
+    font-family: 'Cardo', serif;
+font-family: 'Courgette', cursive;
+}.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face{
+      width: 50px;
+      height: 50px;
+      background-color: #f5f6fa;
+      border-radius: 50px;
+      text-align: center;
+      margin: 10px;
+      box-shadow: 1px 4px 2px 2px #dcdde1;
+      line-height: 50px;
+}.insta{
+      width: 50px;
+      height: 50px;
+      background-color: #f5f6fa;
+      border-radius: 50px;
+      text-align: center;
+      margin: 10px;
+      box-shadow: 1px 4px 2px 2px #dcdde1;
+      line-height: 50px;
+}.twi{
+    width: 50px;
+    height: 50px;
+    background-color: #f5f6fa;
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 1px 4px 2px 2px #dcdde1;
+    line-height: 50px;
+}
+a i{
+    transition: all 0.3 linear;
+}
+a:hover i{
+    transform: scale(1.4);
+}
+.fa-instagram{
+    color: #e84393;
+}
+.fa-twitter{
+    color: #0097e6;
+}
+
+.rang{
+    background-color: #f1f1f1;
+}p#convert::first-letter{
+    color: yellowgreen;
+    font-size: 4rem;
+    float: left;
+    display: block;
+    margin: 0 7px 0 0 ;
+    line-height: 0.6;
+    font-weight: bold;
+}p#convert::first-line{
+    color: yellowgreen;
+}p#convert{
+    font-size: 16px;
+    text-align: justify;
+}

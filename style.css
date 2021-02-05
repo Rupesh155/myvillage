@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif 'Courier New', monospace;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(pexels-johannes-plenio-1103970.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.m1 {
+    width: 280px;
+    height: 180px;
+}
+
+.sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.m2 {
+    width: 200px;
+    height: 100px;
+}
+
+.sub1 {
+    position: absolute;
+    bottom: 79%;
+    right: 43%;
+}
+
+.sub2 {
+    position: absolute;
+    bottom: 43%;
+    left: 76%;
+    width: 270px;
+    height: 80px;
+    backdrop-filter: blur(8px);
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7));
+    /*  background: linear-gradient(to buttom,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.9) 15%,transparent 50%,transparent 85% rgba(255,255,255,0.3) 100%);*/
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m3 {
+    width: 69px;
+    height: 68px;
+}
+
+.m4 {
+    width: 80px;
+    height: 69px;
+    position: relative;
+    left: 88px;
+    top: 25px;
+}
+
+form {
+    width: 270px;
+    height: 280px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    /*  background: linear-gradient(to buttom,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.1) 15%,transparent 50%,transparent 85% rgba(255,255,255,0.3) 100%);*/
+    position: absolute;
+    bottom: 40%;
+    left: 2%;
+    border-radius: 24px;
+    backdrop-filter: blur(8px);
+}
+
+#fileLabelText {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    padding-left: 6px;
+    font-size: 30px;
+    font-weight: lighter;
+    color: blue;
+}
+
+.sub4 {
+    position: absolute;
+    bottom: 22%;
+    left: 25px;
+    outline: none;
+    border: none;
+}
+
+.description {
+    border-radius: 24px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: left;
+    resize: none;
+    backdrop-filter: blur(10px);
+    opacity: 0.5;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 22px;
+    width: 270px;
+    height: 90px;
+    color: #08023f;
+    font-size: 18px;
+    font-weight: bold;
+    /* backdrop-filter: blur(15px); */
+    /*  padding: 16px 20px;*/
+}
+
+.sub4 p {
+    font-size: larger;
+    position: relative;
+    top: 25px;
+    left: 15px;
+    font-weight: bold;
+    color: blue;
+    z-index: 100;
+}
+
+#uploadBtn {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+    position: absolute;
+    bottom: 6%;
+    left: 7%;
+    border-radius: 24px;
+    backdrop-filter: blur(8px);
+    outline: none;
+    border-color: aliceblue;
+}
+
+.uploadButton {
+    font-size: x-large;
+    text-transform: none;
+    font-style: inherit;
+    font-weight: 700;
+    color: blue;
+    font-style: italic;
+}
+
+.uploadSuccessDialog {
+    width: 330px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 35%;
+    left: 36%;
+    border-radius: 24px;
+    display: none;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px rgba(119, 119, 119, 0.651);
+    /* -3px -3px 15px rgba(224, 224, 224, 0.651); */
+}
+
+.uploadFailedDialog {
+    width: 330px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 35%;
+    left: 36%;
+    border-radius: 24px;
+    display: none;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px rgba(119, 119, 119, 0.651);
+    /* -3px -3px 15px rgba(224, 224, 224, 0.651); */
+}
+
+.uploadingDialog {
+    width: 330px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 24px;
+    display: none;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px rgba(119, 119, 119, 0.651);
+    /* -3px -3px 15px rgba(224, 224, 224, 0.651); */
+}
+
+.uploadSuccessText {
+    position: absolute;
+    left: 20%;
+    bottom: 17%;
+    top: 90px;
+    color: rgb(55, 59, 253);
+}
+
+.uploadFailedText {
+    position: absolute;
+    left: 20%;
+    bottom: 17%;
+    top: 90px;
+    color: rgb(253, 55, 55);
+}
+
+.uploadingText {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0, 102, 255);
+}
+
+#successCrossSign, #failedCrossSign {
+    width: 20px;
+    position: absolute;
+    right: 3%;
+    top: 8px;
+}
+
+#doneSign {
+    width: 40px;
+    position: absolute;
+    right: 45%;
+    top: 50px;
+}
+
+.file {
+    display: none;
+}
+
+#brow {
+    position: absolute;
+    left: 100px;
+    bottom: 5%;
+    color: blue;
+    text-align: 200px;
+}
+
+/* USE media for responsive */
+@media(max-width:768px){
+
+    .main{
+        display: block;
+    }
+    .sub {
+        display: none;
+    }
+    form {
+        width: 280px;
+        height: 290px;
+        left: 50%;
+        top: 38%;
+        transform: translate(-50%, -50%);
+    }
+    #fileLabelText {
+        text-align: center;
+        padding-left: 25px; padding-right: 5px;
+        font-size: 27px;
+        font-family: cursive;
+    }
+    .sub4{
+        width: 280px;
+        height: 290px;
+        left: 50%;
+        top: 78%;
+        transform: translate(-50%, -50%);
+    }
+    #uploadBtn {
+        
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -50%);
+    }
+    .sub2 {
+        left: 50%;
+        top: 92%;
+        transform: translate(-50%, -50%);
+    }
+    .sub1 {
+        left: 35%;
+        bottom: 97%;
+        transform: translate(-50%, 100%);
+    }
+    
+}
